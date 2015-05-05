@@ -1,0 +1,95 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>My cool app | Login</title>
+    <link href='http://fonts.googleapis.com/css?family=Lato:300,400,700,900' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="/css/app.css" type="text/css">
+  </head>
+  <body>
+    <div ng-app="loginApp">
+      <h1 class="sign-up-title">Sign up to come aboard</h1>
+      <div class="login-box">
+        <button class="btn fb-sign">
+        <svg class="logo">
+        "><path d="M2.516,4.458c0-0.144,0.02-0.455,0.06-0.931C2.619,3.05,2.799,2.551,3.122,2.027c0.32-0.522,0.839-0.991,1.561-1.406
+          C5.402,0.208,6.441,0,7.797,0h3.82v4.163H8.82c-0.277,0-0.535,0.104-0.768,0.309c-0.231,0.205-0.35,0.4-0.35,0.581v2.59h3.914
+          c-0.041,0.507-0.086,1-0.138,1.476l-0.155,1.258c-0.062,0.425-0.125,0.819-0.187,1.182H7.674v11.542H2.516V11.558H0V7.643h2.516
+          V4.458z" style="
+            color: #fff;
+        "></path>
+        </svg>
+        <span class="label">Signup with Facebook</span></button>
+        <div class="or-break"><hr><span>OR</span></div>
+
+        <div ng-controller="LoginFormCtrl">
+          <form name="form" class="login-credentials" ng-submit="login()" novalidate>
+            <div class="row">
+              <label for="login-name"><span class="mandatory">Your Name</span><br>
+                <input ng-model="user.name" id="login-name" placeholder="Full name" type="text" name="name" required>
+                <has-errors form-name="form" field="name" messages="{ required: 'Name is required' }"></has-errors>
+              </label>
+            </div>
+            <div class="row">
+              <label for="login-email"><span class="mandatory">Email address</span><br>
+                <input ng-model="user.email" id="login-email" placeholder="name#domain" type="email" name="email" required ng-model-options="{ updateOn: 'blur' }">
+                <has-errors form-name="form" field="email" messages="{ required: 'Email is required', 'email': 'Insert a valid email address' }"></has-errors>
+              </label>
+            </div>
+            <div class="row">
+              <label><span class="mandatory">Password</span><br>
+                <input ng-model="user.password" id="login-password" class="disabled" placeholder="Choose a password" type="password" required name="password" ng-model-options="{ updateOn: 'blur' }">
+                <span class="cross" ng-show="(form.$submitted || form.password.$dirty) && form.password.$invalid">×</span>
+
+                <br>
+                </label>
+                <label class="no-text">
+                  <input ng-model="user.confirm_password" id="login-repeat-password" class="disabled" placeholder="Repeat password" type="password" must-match="user.password" name="confirm_password" required ng-model-options="{ updateOn: 'blur' }">
+                  <has-errors form-name="form" field="password" messages="{ required: 'Password is required' }"></has-errors>
+                  <has-errors form-name="form" field="confirm_password" messages="{unique: 'Password does not match'}"></has-errors>
+              </label>
+            </div>
+            <div class="row">
+              <label>Select your Gender<br>
+                  <ul class="login-gender">
+                    <li ng-click="genderPicker('male')" class="sex" ng-class="{current: user.gender == 'male'}">Male</li>
+                    <li ng-click="genderPicker('female')" class="sex" ng-class="{current: user.gender == 'female'}">Female</li>
+                  </ul>
+                </select>
+              </label>
+            </div>
+            <div class="row privacy">
+              <span class="privacy-policy mandatory"><u>I agree to the <em>privacy policy</em></u></span>
+              <div ng-click='togglePrivacy()' class="switch" ng-class="{on: privacy}"><span class="label">{{ (privacy) ? 'yes' : 'no' }}</span></div>
+            </div>
+            <div class="row">
+              <button class="btn signup">SIGNUP</button>
+            </div>
+          </form>
+        </div>
+      <div class="friends" ng-class="{visible: visible}" ng-controller="FriendTableCtrl">
+        <h2 ng-if="people.length">Add some friends!</h2>
+        <h2 ng-if="!people.length">No friends left to add :(</h2>
+        <table ng-if="people.length" class="friend-table">
+          <thead>
+            <tr>
+              <th></th>
+              <th><a href ng-click="order('name', !reverse)">Name</a></th>
+              <th><a href ng-click="order('email', !reverse)">Email</a></th>
+            </tr> 
+          </thead>
+          <tbody>
+            <tr class="friend" ng-repeat="friend in people | orderBy:predicate:reverse">
+              <td><img class="pic" ng-src="{{ friend.pic }}"></td>
+              <td><strong class="name">{{ friend.name }}</strong></td>
+              <td><a class="email" ng-href="mailto:{{ friend.email }}">{{ friend.email }}</a></td>
+              <td><button class="btn small signup" ng-click="addFriend(friend)">Aggiungi</button></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.3.0-rc.4/angular.min.js"></script>
+    <script src="//rawgit.com/angular/bower-angular-animate/v1.3.0-rc.4/angular-animate.min.js"></script>
+    <script src="/js/app.js"></script>
+  </body>
+</html>

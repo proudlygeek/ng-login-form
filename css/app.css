@@ -1,0 +1,339 @@
+body {
+  background-color: transparent;
+  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFEAAABRCAIAAAAl7d1hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA2hpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDpGNzdGMTE3NDA3MjA2ODExODA4M0VCODNDNjJCRDdDMSIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDozQzI1RURGRTQxRjExMUU0QTRBN0VGRjRFOTUzQzNCRCIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDozQzI1RURGRDQxRjExMUU0QTRBN0VGRjRFOTUzQzNCRCIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ1M2IChNYWNpbnRvc2gpIj4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6MDE4MDExNzQwNzIwNjgxMTgyMkFBRTNCNUU2Q0VENkUiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6Rjc3RjExNzQwNzIwNjgxMTgwODNFQjgzQzYyQkQ3QzEiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz4kLL6LAAAA6UlEQVR42uzWMQ6CMBgGUGxZHYyLTl7BO3gIz++Ei3FwbmOTJhAOYInwGiD8U/OFfi/srrd7t8TKOYUQF9m6L3eI0945pUZjTsvsW8Zue0vmbay+HvGZLmsfGabPMjOMYQzTZ5kZxjCG6bPMDGMYw/SZYQxjmD7LzDCGMUyfZWYYwxj2133+vAaGNTSs9Kpcs8b/eBy/8Pv5KM/98dxm3ylzCLGxJYfTpQauLwxbdZ/HI80w/2H+wximzzIzjGEMk5lhDGOYPsvMMIYxTJ9lZhjDGKbPMjOMYfosM8MYxjB9lplhrcevAAMAhmQGLEiDWr8AAAAASUVORK5CYII=);
+  font-family: 'Lato', sans-serif;
+  margin: 0;
+  padding: 20px 0;
+  margin-bottom: 80px;
+}
+
+.mandatory:after {
+  content: '*';
+  color: #C0473B;
+  margin-left: 3px;
+  text-decoration: none;
+}
+
+.login-box {
+  background-color: #fff;
+  border: 4px solid #273646;
+  border-radius: 5px;
+  display: block;
+  margin: 0 auto;
+  padding: 20px 20px 0 20px;
+  width: 360px;
+}
+
+.sign-up-title {
+  color: #fff;
+  text-align: center;
+}
+
+.btn {
+  border: 0;
+  border-radius: 3px;
+  color: #fff;
+  font-size: 16px;
+  outline: 0;
+  padding: 20px;
+  text-align: center;
+  width: 100%;
+  height: 60px;
+  line-height: 0;
+  cursor: pointer;
+}
+
+.btn.small {
+  height: 25px !important;
+  padding: 10px !important;
+  font-size: 12px ! important;
+}
+
+.btn.fb-sign {
+  background-color: #3b5998;
+  -webkit-transition: .2s background-color ease-in;
+          transition: .2s background-color ease-in;
+}
+
+.btn.fb-sign:hover {
+  background-color: #325cb4;
+  box-shadow: rgba(0, 0, 0, .3) 1px 0px 5px
+}
+
+.btn.fb-sign:active {
+  box-shadow: inset rgba(0, 0, 0, 1) 0px 0 5px
+}
+
+.fb-sign .logo {
+  width: 12px;
+  height: 24px;
+  fill: #fff;
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 7px;
+}
+
+.fb-sign .label {
+  display: inline-block;
+  vertical-align: baseline;
+}
+
+.btn.signup {
+  background-color: #3498db;
+  font-weight: 700;
+  font-size: 20px;
+  -webkit-transition: .2s background-color ease-in;
+          transition: .2s background-color ease-in;
+}
+
+.btn.signup:hover {
+  background-color: #2e8ece;
+}
+
+.btn.signup:active {
+  box-shadow: inset rgba(0, 0, 0, 1) 0px 0 5px;
+}
+
+.or-break {
+  color: #b4b4b4;
+  display: inline-block;
+  width: 111%;  
+  text-align: center;
+  margin: 0 auto; 
+  padding: 20px 0 5px 0;
+  margin-left: -20px;
+  line-height: 0;
+}
+
+.or-break hr {
+  border-style: none;
+  border-bottom: 1px solid #bfbfb4;
+}
+
+.or-break span {
+  font-weight: 300;
+  background-color: white;
+  padding: 10px 11px;
+  display: inline-block;
+  margin-top: -20px;
+  font-size: 11px;
+  vertical-align: middle;
+}
+
+.login-credentials .row {
+  margin-bottom: 30px;
+}
+
+.login-credentials label {
+  width: 100%;
+  font-weight: bold;
+  display: inline-block;
+  position: relative;
+}
+
+.login-credentials input {
+  width: 100%;
+  -moz-box-sizing: border-box;
+       box-sizing: border-box;
+  padding: 14px 12px;
+  border-radius: 3px;
+  outline: none;
+  border: 2px solid #34495e;
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+.login-credentials .ng-dirty.ng-invalid,
+.login-credentials.ng-submitted .ng-invalid {
+  border-color: #e95748 !important;
+}
+
+.error {  
+  position: absolute;
+  font-size: 12px;
+  font-weight: 400;
+  color: #e74c3c;
+}
+
+.cross {
+  position: absolute;
+  top: 50%;
+  right: 15px;
+  font-size: 21px;
+  color: #e95748;
+}
+
+.no-text .cross {
+  top: 35%;
+}
+
+.login-gender {
+  list-style: none;
+  margin: 10px 0;
+  padding: 0;
+  display: inline-block;
+  width: 100%;
+  cursor: pointer;
+}
+
+.login-gender .sex {
+  float: left;
+  padding: 15px 0;
+  font-weight: 300;
+  border: 2px solid #34495e;
+  border-radius: 0 3px 3px 0;
+  width: 50%;
+  border-color: #ccc !important;
+  text-align: center;
+  -moz-box-sizing: border-box;
+       box-sizing: border-box;
+  -webkit-transition: .22s background-color ease-out, 
+              .22s border-color ease-out, 
+              .22s color ease-out;
+          transition: .22s background-color ease-out, 
+              .22s border-color ease-out, 
+              .22s color ease-out;
+}
+
+.login-gender .sex:first-child {
+  border-right: none;
+  border-radius: 3px 0 0 3px;
+}
+
+.login-gender .sex:last-child {
+  border-left: 0;
+}
+
+.login-gender .sex.current {
+  background-color: #34495e;
+  border-color: #34495e !important;
+  color: #fff;
+  font-size: 16px;
+}
+
+.privacy {
+  display: inline-block;
+  width: 100%;
+}
+
+.privacy-policy {
+  ont-weight: 300;
+  font-size: 14px;
+  line-height: 25px;
+  float: left;
+  vertical-align: middle;
+  display: inline-block;
+}
+
+.switch {
+  color: #fff;
+  display: inline-block;
+  padding: 2px 15px;
+  border-radius: 20px;
+  font-size: 14px;
+  text-transform: uppercase;
+  vertical-align: middle;
+  float: right;
+  background-color: #e74c3c;
+  -webkit-transition: .22s background-color ease-in-out;
+          transition: .22s background-color ease-in-out;
+  width: 50px;
+  cursor: pointer;
+}
+
+.switch.on {
+  background-color: #2ecc71;
+}
+
+.switch:after {
+  left: -35px;
+  width: 25px;
+  content: '';
+  height: 25px;
+  display: inline-block;
+  position: relative;
+  vertical-align: middle;
+  background-color: #fff;
+  border-radius: 52px;
+  -webkit-transition: margin 0.4s, background 0.4s;
+  transition: margin 0.4s, background 0.4s;
+  -webkit-transition: .33s -webkit-transform ease-out;
+          transition: .33s transform ease-out;
+}
+
+.switch.on:after {
+  -webkit-transform: translateX(48px);
+      -ms-transform: translateX(48px);
+          transform: translateX(48px);
+}
+
+.switch .label {
+  vertical-align: middle;
+  display: inline-block;
+  -webkit-transition: .33s -webkit-transform ease-out;
+          transition: .33s transform ease-out;
+  -webkit-transform: translateX(30px);
+      -ms-transform: translateX(30px);
+          transform: translateX(30px);
+}
+
+.switch.on .label {
+  -webkit-transform: translateX(0);
+      -ms-transform: translateX(0);
+          transform: translateX(0);
+}
+
+.disabled {
+  border-color: #ccc !important;
+}
+
+.friend-table {
+  border: 2px #ccc solid;
+  padding: 10px;
+  border-radius: 3px;
+  background-color: #fff;
+  display: block;
+  margin: 0 auto;
+  font-size: 12px;
+  width: 100%;
+  -moz-box-sizing: border-box;
+       box-sizing: border-box;
+}
+
+.friend .pic {
+  border-radius: 50px;
+  max-width: 50px;
+}
+
+.friend.ng-enter,
+.friend.ng-move,
+.friend.ng-leave {
+  -webkit-transition:0.33s all ease-out;
+  transition:0.33s all ease-out;
+}
+
+.friend.ng-enter,
+.friend.ng-move,
+.friend.ng-leave.ng-leave-active {
+  opacity:0;
+  max-height: 0;
+}
+
+.friend.ng-leave,
+.friend.ng-move.ng-move-active,
+.friend.ng-enter.ng-enter-active {
+  opacity:1;
+}
+
+.friends.visible {
+  display: block;
+  opacity: 1;
+  -webkit-transition: opacity 1s;
+          transition: opacity 1s;
+}
+
+.friends {
+  display: none;
+  opacity: 0;
+  margin-bottom: 20px;
+}
