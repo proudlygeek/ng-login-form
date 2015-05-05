@@ -14,3 +14,5 @@ then open a terminal and run
 ```
 python -m SimpleHTTPServer
 ```
+
+[Demo Page](http://rawgit.com/proudlygeek/ng-login-form/master/index.html)
